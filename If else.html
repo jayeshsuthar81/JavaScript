@@ -9,12 +9,28 @@
     var sum = ((a+b+c)*100)/300;
     document.write("Total Percentage is :>" + "<b>"+ sum + "%</b><br><br> Result:>");
 
-    if(sum>50)
+    if(sum>=90)
     {
-        document.write("Student Pass");
+        document.write("A+");
+    }
+    else if(sum>80)
+    {
+        document.write("A");
+    }
+    else if(sum>70)
+    {
+        document.write("B+");
+    }
+    else if(sum>60)
+    {
+        document.write("B");
+    } 
+    else if(sum>50)
+    {
+        document.write("C");
     }
     else
     {
-        document.write("Student Fail");
+        document.write("D Fail");
     }
 </script>
