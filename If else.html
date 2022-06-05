@@ -7,5 +7,14 @@
     c= parseInt(prompt("Enter The Third Sumbject Marks :> "));
 
     var sum = ((a+b+c)*100)/300;
-    document.write("Total Percentage is :>" + "<b>"+ sum + "</b>");
+    document.write("Total Percentage is :>" + "<b>"+ sum + "%</b><br><br> Result:>");
+
+    if(sum>50)
+    {
+        document.write("Student Pass");
+    }
+    else
+    {
+        document.write("Student Fail");
+    }
 </script>
