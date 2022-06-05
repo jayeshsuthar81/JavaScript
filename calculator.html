@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <table border="1">
+        <form name="f1">
+            <tr>
+                <th colspan="2">CALCULATOR</th>
+            </tr>
+            <tr>
+                <th>Enter Number</th>
+                <th>Enter Number</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="fst" placeholder="Enter First Number"></td>
+                <td><input type="text" name="scn" placeholder="Enter Second Number"></td>
+            </tr>
+            <tr>
+                <th><input type="text" name="rst" placeholder="Answer" readonly></th>
+                <td align="center">
+                    <input type="Button" onclick="add()" value="+">
+                    <input type="Button" onclick="sub()" value="-">
+                    <input type="Button" onclick="multi()" value="*">
+                    <input type="Button" onclick="div()" value="/">
+                </td>
+            </tr>
+        </form>
+    </table>
+    
+<script type="text/javascript">
+    function add()
+    {
+        f1.rst.value=eval(f1.fst.value)+eval(f1.scn.value);
+    }
+    function sub()
+    {
+        f1.rst.value=eval(f1.fst.value)-eval(f1.scn.value);
+    }
+    function multi()
+    {
+        f1.rst.value=eval(f1.fst.value)*eval(f1.scn.value);
+    }
+    function div()
+    {
+        f1.rst.value=eval(f1.fst.value)/eval(f1.scn.value);
+    }
+</script>
+</html>
