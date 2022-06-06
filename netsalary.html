@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net salary Find</title>
+</head>
+<style>
+    td{
+        font-size: 30px;
+    }
+    input{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <form name="f1">
+        <table border="1" align="center">
+            <tr>
+                <td>Emp Code :</td>
+                <td><input type="text" placeholder="Enter EMP Code"></td>
+            </tr>
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td>Post :</td>
+                <td><input type="text" placeholder="Enter Post"></td>
+            </tr>
+            <tr>
+                <td>Basic Salary :</td>
+                <td><input type="text" name="bs" placeholder="Enter Basic Salary"></td>
+            </tr>
+            <tr>
+                <td>HRA</td>
+                <td><input type="text" name="hra" readonly></td>
+            </tr>
+            <tr>
+                <td>DA :</td>
+                <td><input type="text" name="da" readonly></td>
+            </tr>
+            <tr>
+                <td>GPA :</td>
+                <td><input type="text" name="gpa" readonly></td>
+            </tr>
+            <tr>
+                <td>Net Salary :</td>
+                <td><input type="text" name="ns" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center">
+                    <button onclick="bhra()" type="button">HRA</button>
+                    <button onclick="bda()" type="button">DA</button>
+                    <button onclick="bgpa()" type="button">GPA</button>
+                    <button onclick="bns()" type="button">NS</button>
+                    <button type="reset">RESET</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script type="text/javascript">
+function bhra()
+{
+    f1.hra.value = eval(f1.bs.value)*25/100;
+}
+function bda()
+{
+    f1.da.value = eval(f1.bs.value)*35/100;
+}
+function bgpa()
+{
+    f1.gpa.value = eval(f1.bs.value)*15/100;
+}
+function bns()
+{
+    f1.ns.value = eval(f1.bs.value)+eval(f1.hra.value)+eval(f1.da.value)-eval(f1.gpa.value);
+}
+</script>
+</html>
